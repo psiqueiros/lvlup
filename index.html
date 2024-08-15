@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/rpg.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+    <script type="module" src="./components/main.js"></script>
+</head>
+<body>
+    <rpg-gui>
+        <a-button></a-button>
+    </rpg-gui>
+
+    <crt-monitor>
+
+        <crt-panel>
+            <div class="top-char-text">
+                <character-wc expressions="media/characters/fersi-green.png"></character-wc>
+                <textbox-wc>
+                    Hello, you advance the dialogue by pressing the A button|coooool...|Now you can swipe up to go to the next panel!
+                </textbox-wc>
+            </div>
+        </crt-panel>
+
+        <crt-panel>
+            <div class="top-char-text">
+                <character-wc expressions="media/characters/fersi-green.png"></character-wc>
+                <textbox-wc>
+                    Yeah so, appreciate this here picture of my bff|I love this mofo....|And I hope he is doing gr8
+                </textbox-wc>
+            </div>
+            <content-wc type="image" src="media/img/gg-mimido.jpg"></content-wc>
+        </crt-panel>
+
+    </crt-monitor>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+    
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+
+    color: #FFFFFF; /* White text color for the best contrast */
+    font-size: .8em; /* Adjust size as needed */
+    line-height: 1.9em;
+
+    font-family: 'Press Start 2P', cursive; /* Retro-style font for extra flair */
+    text-shadow: 
+      0 0 5px #fff, /* Light glow */
+      0 0 10px #fff, /* Medium glow */
+      0 0 15px #fff, /* Strong glow */
+      0 0 20px #fff, /* Very strong glow */
+      0 0 25px #fff; /* Max glow */
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
