@@ -32,7 +32,7 @@ export class Content extends HTMLElement {
                 object-fit: contain;
             }
             </style>
-            <div class="content-wc"></div>
+            <div></div>
         `;
         this.contentElement = this.shadowRoot.querySelector('div');
 

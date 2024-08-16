@@ -6,8 +6,45 @@ export class RPGGUI extends HTMLElement {
 
     connectedCallback() {
         this.shadowRoot.innerHTML = `
+            <style>
+                :host {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: repeat(12, 1fr);
+                }
+                .arrow-button {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                #up-arrow {
+                    grid-row: 5/6;
+                }
+
+                #down-arrow {
+                    grid-row: 7/8;
+                }
+
+            </style>
+            <button class="arrow-button" id="up-arrow">▲</button>
             <slot></slot>
+            <button class="arrow-button" id="down-arrow">▼</button>
         `;
+
+        this.upArrow = this.shadowRoot.getElementById('up-arrow');
+        this.downArrow = this.shadowRoot.getElementById('down-arrow');
+
+        this.upArrow.addEventListener('click', () => this.navigate('up'));
+        this.downArrow.addEventListener('click', () => this.navigate('down'));
+    }
+
+    navigate(direction) {
+        const event = new CustomEvent('panel-navigation', {
+            bubbles: true,
+            composed: true,
+            detail: { direction }
+        });
+        this.dispatchEvent(event);
     }
 }
 
