@@ -7,15 +7,32 @@ export class Content extends HTMLElement {
     connectedCallback() {
         this.shadowRoot.innerHTML = `
             <style>
-                img {
-                  display: block;
-                  max-width: 100%;
-                  max-height: 75vh;
-                  object-fit: contain;
-                  filter: drop-shadow(0 0 5px var(--glow-color));
-                }
+            div {
+                width: 100%;
+                height: 100%;
+
+                display: flex;
+                flex-wrap: wrap;
+                align-content: center;
+                justify-content: center;
+            }
+            img {
+                height: auto;
+                width: auto;
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+            }
+
+            video {
+                height: auto;
+                width: auto;
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+            }
             </style>
-            <div></div>
+            <div class="content-wc"></div>
         `;
         this.contentElement = this.shadowRoot.querySelector('div');
 

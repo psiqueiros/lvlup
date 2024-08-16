@@ -14,6 +14,9 @@ export class Textbox extends HTMLElement {
                 :host {
                     display: block;
                     color: white;
+                    max-width: 100%; 
+                    max-height: 100%;
+                    object-fit: contain;
                 }
                 .text-content {
                     min-height: 1.2em;
