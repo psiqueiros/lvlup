@@ -18,11 +18,11 @@ export class RPGGUI extends HTMLElement {
                 }
 
                 #up-arrow {
-                    grid-row: 5/6;
+                    grid-row: 4/5;
                 }
 
                 #down-arrow {
-                    grid-row: 7/8;
+                    grid-row: 6/7;
                 }
 
             </style>
