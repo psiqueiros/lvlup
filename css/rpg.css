@@ -20,8 +20,69 @@ a-button {
   object-fit: contain;
   width: 100%;
   height: 100%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.a-button button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
+  transform: scale(0);
+  transition: transform 0.5s ease-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:hover::before {
+  transform: scale(1);
+}
+
+button::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 50px;
+  background: linear-gradient(45deg, #ff00ff, #00ffff, #ff00ff);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+button:hover::after {
+  opacity: 0.5;
+  filter: blur(15px);
+}
 
 crt-panel {
     width: 100vw;
@@ -42,16 +103,41 @@ character-wc {
     justify-self: center;
     align-content: center;
 
-    padding-top: 5px;
+    padding-left: 5px;
 }
 
 textbox-wc {
     grid-column: 4/9;
     grid-row: 1/4;
     align-self: center;
-    justify-content: left;
+    justify-self: left;
+    padding-right: 5px;
 
-    padding-right: 1em;
+    color: #FFFFFF; /* White text color for the best contrast */
+    font-size: .8em; /* Adjust size as needed */
+    line-height: 1.9em;
+
+    font-family: 'Press Start 2P', cursive; /* Retro-style font for extra flair */
+    text-shadow: 
+      0 0 5px #fff, /* Light glow */
+      0 0 10px #fff, /* Medium glow */
+      0 0 15px #fff, /* Strong glow */
+      0 0 20px #fff, /* Very strong glow */
+      0 0 25px #fff; /* Max glow */
+}
+
+.fersi {
+    color: #68ffb3; /* White text color for the best contrast */
+    font-size: .8em; /* Adjust size as needed */
+    line-height: 1.9em;
+
+    font-family: 'Press Start 2P', cursive; /* Retro-style font for extra flair */
+    text-shadow: 
+      0 0 5px #68ffb3, /* Light glow */
+      0 0 10px #68ffb3, /* Medium glow */
+      0 0 15px #68ffb3, /* Strong glow */
+      0 0 20px #68ffb3, /* Very strong glow */
+      0 0 25px #68ffb3; /* Max glow */
 }
 
 content-wc {
@@ -81,18 +167,6 @@ crt-monitor {
     background-color: #131313;
     animation: turn-on 0.4s;
     box-shadow: inset 0 0 10vw 2vw rgba(15, 247, 255, 0.2);
-
-    color: #FFFFFF; /* White text color for the best contrast */
-    font-size: .8em; /* Adjust size as needed */
-    line-height: 1.9em;
-
-    font-family: 'Press Start 2P', cursive; /* Retro-style font for extra flair */
-    text-shadow: 
-      0 0 5px #fff, /* Light glow */
-      0 0 10px #fff, /* Medium glow */
-      0 0 15px #fff, /* Strong glow */
-      0 0 20px #fff, /* Very strong glow */
-      0 0 25px #fff; /* Max glow */
 }
 
 crt-monitor::-webkit-scrollbar {
@@ -167,3 +241,5 @@ crt-monitor::after {
     95% { opacity: 0.36108; }
     100% { opacity: 0.24387; }
 }
+
+

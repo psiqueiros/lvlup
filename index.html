@@ -6,8 +6,8 @@
     <title>Test</title>
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/rpg.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;700&family=VT323&display=swap" rel="stylesheet">
 
     <script type="module" src="./components/main.js"></script>
 </head>
@@ -19,25 +19,44 @@
     <crt-monitor>
 
         <crt-panel>
-            <character-wc expressions="media/characters/fersi-green.png,media/characters/fersi.png,media/characters/fersi-green.png"></character-wc>
-            <textbox-wc>
-                Hello, you advance the dialogue by pressing the A button|coooool...|Now you can swipe up to go to the next panel!
+            <character-wc expressions="media/characters/Fersi/fersi-green.png"></character-wc>
+            <textbox-wc class="fersi">
+                Hey there! Press A to advance the dialogue...|Okay cool, my name's Fersi|I'm the digital ghost of my creator...|He's the guy in the gif below...|What a mess, huh?|Anyways... Press the ▼ to go to the next panel... 
             </textbox-wc>
-            <content-wc type="image" src="media/img/gg-mimido.jpg"></content-wc>
+            <content-wc type="image" src="media/characters/Fersi/Fersi-BubbleHeartHi.gif" style="grid-column: 1 / 8; grid-row: 5 / 12;"></content-wc>
         </crt-panel>
 
         <crt-panel>
-            <character-wc expressions="media/characters/fersi-green.png"></character-wc>
-            <textbox-wc>
-                Yeah so, appreciate this here picture of my bff|I love this mofo....|And I hope he is doing gr8
+            <character-wc expressions="media/characters/Fersi/fersi-green.png"></character-wc>
+            <textbox-wc class="fersi">
+                Yeah, so... These are my childhood friends|I fucking love this beautiful humans|When we hang out...|...we serve ESL textbook cover vibes 0.o
             </textbox-wc>
+            <content-wc type="image" src="media/img/myFriends.jpg"
+            style="grid-column: 1 / 8; grid-row: 5 / 13;"></content-wc>
         </crt-panel>
 
         <crt-panel>
-            <character-wc expressions="media/characters/fersi-green.png"></character-wc>
-            <textbox-wc>
-                Yeah so, appreciate this here picture of my bff|I love this mofo....|And I hope he is doing gr8
+            <character-wc expressions="media/characters/Fersi/fersi-green.png"></character-wc>
+            <textbox-wc class="fersi">
+                This is a random place I saw downtown|Like... what the actual fuck is going on here?!?|This is Queretaro's dt btw|I was just walking and passed by an open door...|...and like saw this cooool portal to nowhere c:
             </textbox-wc>
+            <content-wc type="image" src="media/img/misteriousPlace.jpg"></content-wc>
+        </crt-panel>
+
+        <crt-panel>
+            <character-wc expressions="media/characters/Fersi/fersi-green.png"></character-wc>
+            <textbox-wc class="fersi">
+                This is a bracelet I made uwu|The idea is to use it as meditation aid|Kind of like a Mala|But this specific pattern of beads is meant for boxbreathing c:|like a type of bead for each of the four parts of the breathing cycle
+            </textbox-wc>
+            <content-wc type="video" src="media/img/box-breathing-bracelet.mp4"></content-wc>
+        </crt-panel>
+
+        <crt-panel>
+            <character-wc expressions="media/characters/Fersi/fersi-green.png"></character-wc>
+            <textbox-wc class="fersi">
+                This is a comic panel I copied from Marionetta!!!|Marionetta is one of my favorite Webtoons ever!|The artist Míriam Bonastre Tur is incredibly talented...|Definitely check it out...
+            </textbox-wc>
+            <content-wc type="image" src="media/img/Julia-Marionetta.jpg"></content-wc>
         </crt-panel>
 
     </crt-monitor>
