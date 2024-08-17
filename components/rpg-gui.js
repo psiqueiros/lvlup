@@ -10,7 +10,6 @@ export class RPGGUI extends HTMLElement {
                     display: grid;
                     grid-template-columns: 1fr;
                     grid-template-rows: repeat(12, 1fr);
-                    background-color: #1a1a1a;
                 }
                 .button {
                     width: 40px;
