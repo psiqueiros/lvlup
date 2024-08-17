@@ -16,8 +16,6 @@ export class RPGGUI extends HTMLElement {
                     height: 40px;
                     border-radius: 50%;
                     background: linear-gradient(145deg, #2e2e2e, #272727);
-                    box-shadow: 5px 5px 10px #1c1c1c,
-                                -5px -5px 10px #383838;
                     cursor: pointer;
                     transition: all 0.1s ease;
                     position: relative;
@@ -107,8 +105,6 @@ export class AButton extends HTMLElement {
                     height: 40px;
                     border-radius: 50%;
                     background: linear-gradient(145deg, #2e2e2e, #272727);
-                    box-shadow: 5px 5px 10px #1c1c1c,
-                                -5px -5px 10px #383838;
                     cursor: pointer;
                     transition: all 0.1s ease;
                     position: relative;
