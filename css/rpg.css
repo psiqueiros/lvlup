@@ -86,6 +86,7 @@ button:hover::after {
 
 crt-panel {
     width: 100vw;
+    min-width: 100vw;
     height: 100vh;
     min-height: 100vh;
     box-sizing: border-box;
@@ -93,7 +94,7 @@ crt-panel {
 
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(15, 1fr);
+    grid-template-rows: repeat(16, 1fr);
 }
 
 character-wc {
