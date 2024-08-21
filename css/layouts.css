@@ -1,0 +1,82 @@
+/*The basics for the grid layouts*/
+body {
+    display: grid;
+    grid-template-rows: repeat(16, 1fr);
+    grid-template-columns: repeat(8, 1fr);
+    align-content: center;
+    justify-content: center;
+}
+
+crt-monitor {
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+rpg-gui {
+    display: grid;
+    grid-area: 7/8/10/9;
+}
+
+crt-panel {
+    display: grid;
+    grid-template-rows: repeat(16, 1fr);
+    grid-template-columns: repeat(8, 1fr);
+
+    width: 100%;
+    height: 100%;
+}
+
+character-wc {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+
+textbox-wc {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    padding-right: 5px;
+}
+
+crt-panel img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.content {
+    align-self: center;
+    justify-self: center;
+}
+
+/*Only Character, textbox and a cool bg... for intros I guess?*/
+
+.panel-a character-wc {
+    grid-area: 7/3/11/7;
+    align-self: center;
+    justify-self: center;
+}
+
+.panel-a textbox-wc {
+    grid-area: 5/2/7/8;
+    text-align: center;
+    align-self: center;
+}
+
+/*This is like the character to top left corner and texbox top right... with content below. The basic most conent panel I guess*/
+
+.panel-b character-wc {
+    grid-area: 1/1/5/4;
+    align-self: center;
+    justify-self: center;
+}
+
+.panel-b textbox-wc {
+    grid-area: 1/4/5/9;
+    align-self: center;
+}

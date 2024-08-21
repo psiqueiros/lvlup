@@ -10,8 +10,7 @@ export class Character extends HTMLElement {
         this.shadowRoot.innerHTML = `
             <style>
                 img, video {
-                box-sizing: border-box;
-                max-width: 100%; 
+                max-width: 100%;
                 max-height: 100%;
                 object-fit: contain;
                 }

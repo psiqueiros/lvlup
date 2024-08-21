@@ -6,11 +6,6 @@ export class RPGGUI extends HTMLElement {
     connectedCallback() {
         this.shadowRoot.innerHTML = `
             <style>
-                :host {
-                    display: grid;
-                    grid-template-columns: 1fr;
-                    grid-template-rows: repeat(12, 1fr);
-                }
                 .button {
                     width: 40px;
                     height: 40px;
@@ -46,14 +41,12 @@ export class RPGGUI extends HTMLElement {
                     text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
                 }
                 #up-arrow {
-                    grid-row: 4/5;
-                    justify-self: center;
                     align-self: center;
+                    justify-self: center; 
                 }
                 #down-arrow {
-                    grid-row: 6/7;
-                    justify-self: center;
                     align-self: center;
+                    justify-self: center; 
                 }
                 @keyframes neon-pulse {
                     0%, 100% {

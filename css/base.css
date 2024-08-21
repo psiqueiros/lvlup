@@ -9,11 +9,6 @@ body {
     padding: 0;
     height: 100vh;
     overflow: hidden;
-    background-color: black;
-
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(15, 1fr);
 }
 
 body::-webkit-scrollbar {

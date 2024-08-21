@@ -1,21 +1,8 @@
 rpg-gui {
     z-index: 1000;
-
-    object-fit: contain;
-    grid-column: 8/9;
-    grid-row:4/16;
-    align-self: center;
-    justify-self: center;
-
-    height: 100%;
-    width: 100%;
-    padding-right: 1vw;
 }
 
 a-button {
-  grid-column: 1/2;
-  grid-row: 5/6;
-
   overflow: hidden;
   object-fit: contain;
   width: 100%;
@@ -91,31 +78,11 @@ crt-panel {
     min-height: 100vh;
     box-sizing: border-box;
     scroll-snap-align: center;
-
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(16, 1fr);
-}
-
-character-wc {
-    grid-column: 1/4;
-    grid-row: 1/4;
-
-    justify-self: center;
-    align-content: center;
-
-    padding-left: 5px;
 }
 
 textbox-wc {
-    grid-column: 4/9;
-    grid-row: 1/4;
-    align-self: center;
-    justify-self: left;
-    padding-right: 5px;
-
     color: #FFFFFF; /* White text color for the best contrast */
-    font-size: .8em; /* Adjust size as needed */
+    font-size: 1em; /* Adjust size as needed */
     line-height: 1.9em;
 
     font-family: 'Press Start 2P', cursive; /* Retro-style font for extra flair */
@@ -141,25 +108,7 @@ textbox-wc {
       0 0 25px #68ffb3; /* Max glow */
 }
 
-content-wc {
-    grid-column: 1/8;
-    grid-row: 4/16;
-
-    overflow: hidden;
-    max-height: 100%;
-    max-width: 100%;
-    object-fit: contain;
-}
-
 .content {
-  grid-column: 1/8;
-  grid-row: 4/16;
-  justify-self: center;
-  align-self: center;
-
-  max-width: 90%;
-  max-height: 90%;
-  object-fit: contain;
   border: 5px solid #111; /* Dark border for the arcade cabinet */
   border-radius: 20px; /* Rounded corners */
   box-shadow: 

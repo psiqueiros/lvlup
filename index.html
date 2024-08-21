@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test</title>
     <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/layouts.css">
     <link rel="stylesheet" href="./css/rpg.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;700&family=VT323&display=swap" rel="stylesheet">
@@ -16,66 +17,32 @@
         <a-button></a-button>
     </rpg-gui>
 
-    <crt-monitor>
+    <crt-monitor style="background-image: url('media/bgs/hdd.webp');">
 
-        <crt-panel>
+        <crt-panel class="panel-a">
+
             <character-wc expressions="media/characters/Fersi/fersi-green.png"></character-wc>
 
             <textbox-wc class="fersi">
-                Hey there! Press A to advance the dialogue...|Okay cool, my name's Fersi|I'm the digital ghost of my creator...|He's the guy in the gif below...|What a mess, huh?|Anyways... Press the ▼ to go to the next panel... 
+                Holisss...Presiona A para avanzar el texto... porfis...|Mi nombre es Fersi!!?|Bienvenidos sean internautas a mi pedacito de interneee...|Presiona la ▼ para ir al siguiente panel...te va a gustar...espero...
             </textbox-wc>
-
-            <img src="media/characters/Fersi/Fersi-BubbleHeartHi.gif" alt="Just myself being cute"
-            class="content"
-            style="grid-column: 1/8; grid-row: 5/12;">
 
         </crt-panel>
 
-        <crt-panel>
+        <crt-panel class="panel-b">
+
             <character-wc expressions="media/characters/Fersi/fersi-green.png"></character-wc>
 
             <textbox-wc class="fersi">
-                Yeah, so... These are my childhood friends|I fucking love this beautiful humans|When we hang out...|...we serve ESL textbook cover vibes 0.o
+                Les invito cordialmente a subir de nivel...|Escoge una actividad y practiquemos juntxs owo|"¿Por...?" Te escucho preguntar...|¿De verdad necesitas que te explique cómo aprender a pilotear tu saco de carne y hueso te beneficia?!?!?!?!|Respiración, movilidad, otro idioma, desarrollo web...|Autoterapia, leer, escribir, dibujar...|Hay tantas cosas chidas por hacer y lo mejor es:|Practicar cualquiera de estas actividades es una recompensa en sí misma.|En los siguientes paneles verás algunas actividades que estoy practicando y recursos para aprender|Entonces, ¿VAMOS A SUBIR DE NIVEL O KE?!?! C PANDEAN???
             </textbox-wc>
 
-            <img src="media/img/myFriends.webp" alt="My childhood Friends c:"
-            class="content"
-            style="grid-column: 1 / 8; grid-row: 5 / 12;">
-
-        </crt-panel>
-
-        <crt-panel>
-            <character-wc expressions="media/characters/Fersi/fersi-green.png"></character-wc>
-
-            <textbox-wc class="fersi">
-                This is a random place I saw downtown|Like... what the actual fuck is going on here?!?|This is Queretaro's dt btw|I was just walking and passed by an open door...|...and like saw this cooool portal to nowhere c:
-            </textbox-wc>
-
-            <img src="media/img/misteriousPlace.webp" alt="A portal to...somewhere???"
+            <img src="media/img/Sportacus.gif" alt="Magunus Scheving aka Sportacus!!!"
+            style="grid-area: 5/2/8/5;"
             class="content">
 
-        </crt-panel>
-
-        <crt-panel>
-            <character-wc expressions="media/characters/Fersi/fersi-green.png"></character-wc>
-
-            <textbox-wc class="fersi">
-                This is a bracelet I made uwu|The idea is to use it as meditation aid|Kind of like a Mala|But this specific pattern of beads is meant for boxbreathing c:|like a type of bead for each of the four parts of the breathing cycle
-            </textbox-wc>
-            
-            <iframe width="315" height="560" src="https://www.youtube.com/embed/1b5R-1WQNtQ" title="box breathing bracelet!" 
-            class="content" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-        </crt-panel>
-
-        <crt-panel>
-            <character-wc expressions="media/characters/Fersi/fersi-green.png"></character-wc>
-
-            <textbox-wc class="fersi">
-                This is a comic panel I copied from Marionetta!!!|Marionetta is one of my favorite Webtoons ever!|The artist Míriam Bonastre Tur is incredibly talented...|Definitely check it out...
-            </textbox-wc>
-
-            <img src="media/img/Julia-Marionetta.webp" alt="Fanart, Julia from Marionetta by Míriam Bonastre Tur"
+            <img src="media/img/AangTraining.gif" alt="Aang's kettlebell Earthbending Training..."
+            style="grid-area: 13/2/16/6;"
             class="content">
 
         </crt-panel>
