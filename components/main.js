@@ -3,6 +3,7 @@ import { CRTmonitor, CRTpanel } from './crt-monitor.js';
 import { Character } from './character.js';
 import { Textbox } from './textbox.js';
 import { Content } from './content.js';
+import { ComicLink } from './comic-link.js';
 
 customElements.define('rpg-gui', RPGGUI);
 customElements.define('a-button', AButton);
@@ -11,6 +12,7 @@ customElements.define('crt-panel', CRTpanel);
 customElements.define('character-wc', Character);
 customElements.define('textbox-wc', Textbox);
 customElements.define('content-wc', Content);
+customElements.define('comic-link', ComicLink);
 
 document.addEventListener('DOMContentLoaded', () => {
     const aButton = document.querySelector('a-button');

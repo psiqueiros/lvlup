@@ -13,10 +13,21 @@ export class Textbox extends HTMLElement {
             <style>
                 :host {
                     display: block;
-                    color: white;
                     max-width: 100%; 
                     max-height: 100%;
                     object-fit: contain;
+
+                    color: #FFFFFF; /* White text color for the best contrast */
+                    font-size: 1em; /* Adjust size as needed */
+                    line-height: 1.9em;
+
+                    font-family: 'Press Start 2P', cursive; /* Retro-style font for extra flair */
+                    text-shadow: 
+                      0 0 5px #fff, /* Light glow */
+                      0 0 10px #fff, /* Medium glow */
+                      0 0 15px #fff, /* Strong glow */
+                      0 0 20px #fff, /* Very strong glow */
+                      0 0 25px #fff; /* Max glow */
                 }
                 .text-content {
                     min-height: 1.2em;
