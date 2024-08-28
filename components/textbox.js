@@ -7,7 +7,6 @@ export class Textbox extends HTMLElement {
         this.isAnimating = false;
         this.animationSpeed = 50; // milliseconds per character
     }
-
     connectedCallback() {
         this.shadowRoot.innerHTML = `
             <style>
@@ -16,11 +15,9 @@ export class Textbox extends HTMLElement {
                     max-width: 100%; 
                     max-height: 100%;
                     object-fit: contain;
-
                     color: #FFFFFF; /* White text color for the best contrast */
                     font-size: 1em; /* Adjust size as needed */
                     line-height: 1.9em;
-
                     font-family: 'Press Start 2P', cursive; /* Retro-style font for extra flair */
                     text-shadow: 
                       0 0 5px #fff, /* Light glow */
@@ -43,6 +40,14 @@ export class Textbox extends HTMLElement {
                     animation: blink 0.7s step-end infinite;
                     vertical-align: text-bottom;
                 }
+                .text-content.last-section::after {
+                    width: 0;
+                    height: 0;
+                    border-left: 0.6em solid transparent;
+                    border-right: 0.6em solid transparent;
+                    border-top: 1.2em solid #fff;
+                    background-color: transparent;
+                }
                 @keyframes blink {
                     from, to { opacity: 1; }
                     50% { opacity: 0; }
@@ -51,20 +56,17 @@ export class Textbox extends HTMLElement {
             <div class="text-content"></div>
         `;
         this.textElement = this.shadowRoot.querySelector('.text-content');
-
         // Initialize text if provided
         const textContent = this.textContent.trim();
         if (textContent) {
             this.setText(textContent);
         }
     }
-
     setText(text) {
         this.sections = text.split('|').map(section => section.trim());
         this.currentSection = 0;
         this.updateText();
     }
-
     nextSection() {
         if (this.isAnimating) {
             // If animation is in progress, complete it immediately
@@ -75,18 +77,18 @@ export class Textbox extends HTMLElement {
             this.updateText();
         }
     }
-
     updateText() {
         if (this.textElement) {
             if (this.sections.length > 0) {
                 this.textElement.textContent = '';
                 this.animateText(this.sections[this.currentSection]);
+                // Add or remove the 'last-section' class based on whether it's the last section
+                this.textElement.classList.toggle('last-section', this.currentSection === this.sections.length - 1);
             }
         } else {
             console.error('Text element is not defined.');
         }
     }
-
     animateText(text) {
         this.isAnimating = true;
         let i = 0;
@@ -101,7 +103,6 @@ export class Textbox extends HTMLElement {
         };
         animate();
     }
-
     completeAnimation() {
         clearTimeout(this.animationTimeout);
         this.textElement.textContent = this.sections[this.currentSection];
